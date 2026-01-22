@@ -1,0 +1,134 @@
+/* =========================
+   Global Reset & Base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   Logo
+========================= */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #0a3d62;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   Header & Navbar
+========================= */
+.header {
+    background: linear-gradient(135deg, #0a3d62, #1e90ff);
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.name h1 {
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+.temple-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Temple Cards */
+.temple-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.temple-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.temple-card h3 {
+    margin: 15px 0 10px;
+    color: #34495e;
+}
+
+.temple-card p {
+    font-size: 15px;
+    color: #555;
+}

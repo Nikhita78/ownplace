@@ -1,0 +1,253 @@
+/* =========================
+   Global Reset & Base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   Logo
+========================= */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #0a3d62;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   Header & Navbar
+========================= */
+.header {
+    background: linear-gradient(135deg, #0a3d62, #1e90ff);
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.name h1 {
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Intro Section
+========================= */
+.intro {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.4rem;
+    color: #0a3d62;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* =========================
+   Famous Section
+========================= */
+.famous {
+    padding: 70px 25px;
+    background-color: #eef2f7;
+}
+
+.famous-card,
+.famous1-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.icon {
+    background-color: #fff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+.icon i {
+    font-size: 42px;
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+.icon h3 {
+    margin-bottom: 12px;
+    color: #0a3d62;
+    font-size: 1.2rem;
+}
+
+.icon p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+    background-color: #0a3d62;
+    color: #ffffff;
+    padding: 70px 25px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 140px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+}
+
+.footer-box h3,
+.footer-box h4 {
+    margin-bottom: 15px;
+}
+
+.footer-box p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.footer-box i {
+    margin-right: 8px;
+    color: #ffdd59;
+}
+
+/* =========================
+   Social Icons
+========================= */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ffdd59;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   Footer Links
+========================= */
+.footer-links li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: #ffdd59;
+}
+
+/* =========================
+   Google Map
+========================= */
+iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+
+    .name h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+}

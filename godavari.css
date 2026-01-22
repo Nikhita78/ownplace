@@ -1,0 +1,153 @@
+/* =========================
+   Global Reset & Base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   Logo
+========================= */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #0a3d62;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   Header & Navbar
+========================= */
+.header {
+    background: linear-gradient(135deg, #0a3d62, #1e90ff);
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.name h1 {
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* General Page Styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Styling */
+.river-section {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading Styling */
+.river-section h2 {
+    color: #1e3a8a;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-left: 5px solid #3b82f6;
+    padding-left: 12px;
+}
+
+/* Paragraph Styling */
+.river-section p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Image Styling */
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .image-gallery img {
+        height: 180px;
+    }
+}
+
