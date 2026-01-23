@@ -1,22 +1,15 @@
-/* =========================
-   Global Reset & Base
-========================= */
+/* ================= GLOBAL STYLES ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background-color: #f4f6f9;
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 a {
@@ -24,111 +17,138 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
-}
-
-/* =========================
-   Logo
-========================= */
-.logo {
-    display: flex;
-    justify-content: center;
-    margin: 25px 0;
-}
-
-.logo img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid #0a3d62;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-/* =========================
-   Header & Navbar
-========================= */
+/* ================= HEADER / NAVBAR ================= */
 .header {
-    background: linear-gradient(135deg, #0a3d62, #1e90ff);
-    padding: 25px 15px;
-    text-align: center;
-    color: #fff;
+    background-color: #1e3d59;
+    color: white;
+    padding: 10px 20px;
 }
 
-.name h1 {
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.navbar ul {
+.navbar {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar ul li a {
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 6px;
-    transition: background 0.3s ease, transform 0.2s ease;
+.navbar .logo img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-.navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-}
-.temple-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
+.navbar .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.section-title {
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #2c3e50;
+    padding: 50px 20px;
+    background: linear-gradient(to right, white);
 }
 
-/* Temple Cards */
+.page-title h1 {
+    font-size: 2.8rem;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 5px rgba(255,77,109,0.3);
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ================= TEMPLE CARDS ================= */
+.temple-section {
+    padding: 50px;
+}
+
 .temple-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    gap: 30px;
 }
 
 .temple-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
 
 .temple-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .temple-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.temple-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 .temple-card h3 {
-    margin: 15px 0 10px;
-    color: #34495e;
+    margin: 15px;
+    color: #f90000;
+    font-size: 1.5rem;
 }
 
 .temple-card p {
-    font-size: 15px;
-    color: #555;
+    margin: 0 15px 15px 15px;
+    color: black;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 1200px) {
+    .temple-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .temple-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .temple-list {
+        grid-template-columns: 1fr;
+    }
+    .page-title h1 {
+        font-size: 2.2rem;
+    }
+    .temple-card h3 {
+        font-size: 1.3rem;
+    }
 }
