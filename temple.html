@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajahmundry</title>
-    <link rel="stylesheet" href="temple.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temples | Rajahmundry</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="temple.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
-
 <body>
-    <a href="index.html" class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-QRB5bi3UPWW811ze7-_r1xvLygzXPRHLgA&s.jpeg"
-             alt="Rajahmundry Logo">
-    </a>
-    <header class="header">
-        <div class="name">
-            <h1>RAJAHMUNDRY</h1>
-        </div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">own place</a></li>
-                <li><a href="godavari.html">Godavari</a></li>
-                <li><a href="festival.html">Festivals</a></li>
-                <li><a href="temple.html">Temple</a></li>        
-            </ul>
-        </nav>
-    </header>
-     <main class="temple-section">
-        <h2 class="section-title">Famous Temples in Rajahmundry</h2>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-QRB5bi3UPWW811ze7-_r1xvLygzXPRHLgA&s.jpeg" alt="Rajahmundry Logo">
+            <span>Rajahmundry</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="godavari.html">Godavari</a></li>
+            <li><a href="festival.html">Festivals</a></li>
+            <li><a href="temple.html" class="active">Temples</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="temple-list">
+<!-- ================= PAGE TITLE ================= -->
+<section class="page-title">
+    <h1>Famous Temples in Rajahmundry</h1>
+    <p>Explore the spiritual heritage of Rajahmundry through its most renowned temples.</p>
+</section>
 
-            <div class="temple-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0RAKriKOhEQFtv1_co1e2CVhX_SIgHmFAw&s.jpg"
-                     alt="ISKCON Temple Rajahmundry">
-                <h3>ISKCON Temple</h3>
-                <p>
-                    The ISKCON Temple in Rajahmundry is dedicated to Lord Krishna and is known for its peaceful
-                    spiritual atmosphere and devotional programs.
-                </p>
-            </div>
+<!-- ================= TEMPLE CARDS ================= -->
+<main class="temple-section">
+    <div class="temple-list">
 
-            <div class="temple-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNsABq4CELBS7h0PpFUefylnIKklFgAbIBw&s.jpg"
-                     alt="Markandeya Swamy Temple">
-                <h3>Markandeya Swamy Temple</h3>
-                <p>
-                    An ancient Shiva temple located on the banks of the Godavari River, associated with Sage Markandeya.
-                </p>
-            </div>
+        <article class="temple-card" data-title="ISKCON Temple" data-description="The ISKCON Temple is dedicated to Lord Krishna and known for its serene spiritual atmosphere and devotional programs." data-color="#ffafbd,#ffc3a0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0RAKriKOhEQFtv1_co1e2CVhX_SIgHmFAw&s.jpg" alt="ISKCON Temple">
+            <h3>ISKCON Temple</h3>
+            <p>The ISKCON Temple is dedicated to Lord Krishna and known for its serene spiritual atmosphere.</p>
+        </article>
 
-            <div class="temple-card">
-                <img src="https://dynamic.tourtravelworld.com/package-images/photo-small/dir_18/526893/264807.jpg"
-                     alt="Visweswara Swamy Temple">
-                <h3>Visweswara Swamy Temple</h3>
-                <p>
-                    Also known as Dakshina Kasi, this historic temple is an important pilgrimage site in Rajahmundry.
-                </p>
-            </div>
+        <article class="temple-card" data-title="Markandeya Swamy Temple" data-description="An ancient Shiva temple on the banks of the Godavari River, associated with Sage Markandeya." data-color="#fbc2eb,#a6c1ee">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNsABq4CELBS7h0PpFUefylnIKklFgAbIBw&s.jpg" alt="Markandeya Swamy Temple">
+            <h3>Markandeya Swamy Temple</h3>
+            <p>An ancient Shiva temple on the banks of the Godavari River.</p>
+        </article>
 
-            <div class="temple-card">
-                <img src="https://i.pinimg.com/originals/15/1d/af/151daf8e387ef1eb9c7f8053c558a513.jpg"
-                     alt="Bala Tripura Sundari Temple">
-                <h3>Bala Tripura Sundari Temple</h3>
-                <p>
-                    Dedicated to Goddess Bala Tripura Sundari, this temple is part of the Visweswara temple complex.
-                </p>
-            </div>
+        <article class="temple-card" data-title="Visweswara Swamy Temple" data-description="Also known as Dakshina Kasi, this historic temple is a major pilgrimage site in Rajahmundry." data-color="#fddb92,#d1fdff">
+            <img src="https://dynamic.tourtravelworld.com/package-images/photo-small/dir_18/526893/264807.jpg" alt="Visweswara Swamy Temple">
+            <h3>Visweswara Swamy Temple</h3>
+            <p>Also known as Dakshina Kasi, a historic temple and major pilgrimage site.</p>
+        </article>
 
-        </div>
+        <article class="temple-card" data-title="Bala Tripura Sundari Temple" data-description="Dedicated to Goddess Bala Tripura Sundari, part of the Visweswara temple complex." data-color="#cfd9df,#e2ebf0">
+            <img src="https://i.pinimg.com/originals/15/1d/af/151daf8e387ef1eb9c7f8053c558a513.jpg" alt="Bala Tripura Sundari Temple">
+            <h3>Bala Tripura Sundari Temple</h3>
+            <p>Dedicated to Goddess Bala Tripura Sundari, part of the Visweswara temple complex.</p>
+        </article>
 
-    </main>
-
+    </div>
+</main>
+</body>
+</html>
