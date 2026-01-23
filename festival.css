@@ -1,22 +1,15 @@
-/* =========================
-   Global Reset & Base
-========================= */
+/* ================= GLOBAL STYLES ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background-color: #f4f6f9;
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 a {
@@ -24,151 +17,177 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
-}
-
-/* =========================
-   Logo
-========================= */
-.logo {
-    display: flex;
-    justify-content: center;
-    margin: 25px 0;
-}
-
-.logo img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid #0a3d62;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-/* =========================
-   Header & Navbar
-========================= */
+/* ================= HEADER / NAVBAR ================= */
 .header {
-    background: linear-gradient(135deg, #0a3d62, #1e90ff);
-    padding: 25px 15px;
-    text-align: center;
-    color: #fff;
+    background-color: #1e3d59;
+    color: white;
+    padding: 10px 20px;
 }
 
-.name h1 {
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.navbar ul {
+.navbar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+/* ================= PAGE TITLE ================= */
+.page-title {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, white);
+}
+
+.page-title h1 {
+    font-size: 2.8rem;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 5px rgba(255,77,109,0.3);
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ================= FESTIVAL CARDS ================= */
+.festivals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
     gap: 30px;
-    flex-wrap: wrap;
+    padding: 50px;
 }
 
-.navbar ul li a {
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 6px;
-    transition: background 0.3s ease, transform 0.2s ease;
+.festival-card {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    position: relative;
 }
 
-.navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+.festival-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Body Styling */
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f3f6fa;
+.festival-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.festival-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.festival-card h2 {
+    margin: 15px;
+    color: #ff4d6d;
+    font-size: 1.5rem;
+}
+
+.festival-card p {
+    margin: 0 15px 15px 15px;
+    color: black;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ================= FESTIVAL DETAIL ================= */
+.festival-detail {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 20px;
+    border-top: 2px dashed #ff4d6d;
+    border-radius: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.festival-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+.festival-detail p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
     color: #333;
 }
 
-/* Header Section */
-header {
-    background: linear-gradient(135deg, #f5f5f7, #ffffff);
-    color: #fa2003;
-    text-align: center;
-    padding: 50px 20px;
+/* ================= FESTIVE ACCENTS ================= */
+.festival-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #ffe66d);
+    border-radius: 50%;
+    z-index: 1;
+    transform: rotate(20deg);
+    opacity: 0.7;
 }
 
-header h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
+/* ================= RESPONSIVE DESIGN ================= */
+@media screen and (max-width: 1200px) {
+    .festivals {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards on medium screens */
+    }
 }
 
-header p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
+@media screen and (max-width: 900px) {
+    .festivals {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards on tablets */
+    }
 }
 
-/* Festivals Section */
-.festivals {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-/* Festival Card */
-.festival-card {
-    background-color: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Festival Images */
-.festival-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-/* Festival Title */
-.festival-card h2 {
-    font-size: 24px;
-    color: #1e3a8a;
-    margin: 16px;
-}
-
-/* Festival Description */
-.festival-card p {
-    font-size: 16px;
-    color: #555;
-    margin: 0 16px 20px 16px;
-    line-height: 1.6;
-}
-
-/* Hover Effect */
-.festival-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
+@media screen and (max-width: 600px) {
+    .festivals {
+        grid-template-columns: 1fr; /* 1 card on mobiles */
+        padding: 20px;
     }
 
-    header p {
-        font-size: 16px;
+    .page-title h1 {
+        font-size: 2.2rem;
     }
 
-    .festival-card img {
-        height: 180px;
+    .festival-card h2 {
+        font-size: 1.3rem;
     }
 }
