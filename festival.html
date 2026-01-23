@@ -1,84 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajahmundry</title>
-    <link rel="stylesheet" href="festival.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Festivals | Rajahmundry</title>
+<link rel="stylesheet" href="festival.css">
+<script defer src="festival.js"></script>
 </head>
-
 <body>
-    <a href="index.html" class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-QRB5bi3UPWW811ze7-_r1xvLygzXPRHLgA&s.jpeg"
-             alt="Rajahmundry Logo">
-    </a>
-    <header class="header">
-        <div class="name">
-            <h1>RAJAHMUNDRY</h1>
-        </div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">own place</a></li>
-                <li><a href="godavari.html">Godavari</a></li>
-                <li><a href="festival.html">Festivals</a></li>
-                <li><a href="temple.html">Temple</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-QRB5bi3UPWW811ze7-_r1xvLygzXPRHLgA&s.jpeg" alt="Rajahmundry Logo">
+            <span>Rajahmundry</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="godavari.html">Godavari</a></li>
+            <li><a href="festival.html">Festivals</a></li>
+            <li><a href="temple.html">Temples</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <header>
-        <h1>Festivals of Rajahmundry</h1>
-        <p>Rajahmundry is a cultural hub in Andhra Pradesh, celebrating many vibrant festivals throughout the year.</p>
-    </header>
+<section class="page-title">
+    <h1>Festivals of Rajahmundry</h1>
+    <p>Rajahmundry is a cultural hub in Andhra Pradesh, celebrating many vibrant festivals throughout the year.</p>
+</section>
 
-    <section class="festivals">
-        <article class="festival-card">
-            <img src="https://assets.thehansindia.com/h-upload/2021/01/13/1024509-makar-sankranti.webp.jpg" height="200" width="200" alt="Sankranti Festival">
-            <h2>Sankranti</h2>
-            <p>Sankranti is a harvest festival celebrated with kite flying, traditional dances, and family gatherings. It marks the beginning of the harvest season.</p>
-        </article>
+<section class="festivals" id="festivals">
 
-        <article class="festival-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7NjWWjs9EhFf_modH1ysNH9MbxCd1KCHkg&s.jpg" height="200" width="200" alt="Diwali Festival">
-            <h2>Diwali</h2>
-            <p>Diwali, the festival of lights, is celebrated with lamps, fireworks, and sweets. Families decorate homes and share festive meals.</p>
-        </article>
+    <!-- Example Festival Card -->
+    <article class="festival-card" data-title="Sankranti" data-description="Sankranti is a harvest festival celebrated with kite flying, traditional dances, and family gatherings. It marks the beginning of the harvest season." data-color="#ff9a9e,#fad0c4">
+        <img src="https://assets.thehansindia.com/h-upload/2021/01/13/1024509-makar-sankranti.webp.jpg" alt="Sankranti Festival">
+        <h2>Sankranti</h2>
+        <p>Sankranti is a harvest festival celebrated with kite flying, traditional dances, and family gatherings.</p>
+    </article>
 
-        <article class="festival-card">
-            <img src="https://www.itslife.in/wp-content/gallery/life-photos/cache/lp-dasara-durga-pooja.jpg-nggid048217-ngg0dyn-600x450x100-00f0w010c011r110f110r010t010.jpg"  height="200" width="200" alt="Dussehra Festival">
-            <h2>Dussehra</h2>
-            <p>Dussehra celebrates the victory of good over evil. In Rajahmundry, colorful processions, cultural performances, and rituals are held.</p>
-        </article>
+    <article class="festival-card" data-title="Diwali" data-description="Diwali, the festival of lights, is celebrated with lamps, fireworks, and sweets. Families decorate homes and share festive meals." data-color="#fbc2eb,#a6c1ee">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7NjWWjs9EhFf_modH1ysNH9MbxCd1KCHkg&s.jpg" alt="Diwali Festival">
+        <h2>Diwali</h2>
+        <p>The festival of lights, celebrated with lamps, fireworks, and sweets.</p>
+    </article>
 
-        <article class="festival-card">
-            <img src="https://images.picxy.com/cache/2019/9/30/3b24c3fd04f45b65ce114c80dc1800a3.jpg" height="200" width="200" alt="Boat Festival">
-            <h2>Godavari Pushkaralu</h2>
-            <p>Every 12 years, the Godavari Pushkaralu is celebrated with devotees taking holy dips in the river and performing rituals along the ghats of Rajahmundry.</p>
-        </article>
-         <article class="festival-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi5kB9lNNWjghCvWg8f1kRYlC_F5B72bsdaA&s.jpg" height="200" width="200"  alt="Ugadi Festival">
+    <article class="festival-card" data-title="Dussehra" data-description="Dussehra celebrates the victory of good over evil with colorful processions, cultural performances, and rituals." data-color="#fddb92,#d1fdff">
+        <img src="https://file.oyephoto.com/uploads/preview/happy-dussehra-navratri-durga-puja-wishes-wallpapers-11632541071qozymwl2ai.jpg" alt="Dussehra Festival">
+        <h2>Dussehra</h2>
+        <p>Celebrates the victory of good over evil with colorful processions.</p>
+    </article>
+    <!-- Godavari Pushkaralu -->
+    <article class="festival-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sunset_at_Godavri.JPG" alt="Boat Festival">
+        <h2>Godavari Pushkaralu</h2>
+        <p>Every 12 years, devotees take holy dips in the Godavari River and perform rituals along the ghats of Rajahmundry.</p>
+    </article>
+
+    <!-- Ugadi -->
+    <article class="festival-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi5kB9lNNWjghCvWg8f1kRYlC_F5B72bsdaA&s.jpg" alt="Ugadi Festival">
         <h2>Ugadi</h2>
-        <p>
-            Ugadi marks the Telugu New Year and is celebrated with special dishes like
-            Ugadi Pachadi, prayers, and cultural programs in Rajahmundry.
-        </p>
+        <p>Marks the Telugu New Year and is celebrated with special dishes, prayers, and cultural programs.</p>
     </article>
 
     <!-- Maha Shivaratri -->
     <article class="festival-card">
-        <img src="https://wanderon-images.gumlet.io/blogs/new/2024/02/maha-shivratri-festival-at-murudeshwar-karnataka-1.jpg" height="200" width="200" alt="Maha Shivaratri">
+        <img src="https://wanderon-images.gumlet.io/blogs/new/2024/02/maha-shivratri-festival-at-murudeshwar-karnataka-1.jpg" alt="Maha Shivaratri">
         <h2>Maha Shivaratri</h2>
-        <p>
-            Maha Shivaratri is an important Hindu festival celebrated with night-long
-            prayers and devotion at Shiva temples across Rajahmundry.
-        </p>
+        <p>An important Hindu festival celebrated with night-long prayers and devotion at Shiva temples.</p>
     </article>
-    </section>
+
+    <!-- Vinayaka Chavithi -->
+    <article class="festival-card">
+        <img src="https://kreditbee.in/blog/content/images/2024/08/Blog-Image_Aug_11_Ganesh-Chaturthi--Vinayaka-Chavithi--in-India-2024.png" alt="Vinayaka Chavithi">
+        <h2>Vinayaka Chavithi</h2>
+        <p>Devotees worship Lord Ganesha with clay idols, prayers, and immersion processions during this festival.</p>
+    </article>
+
+    <!-- Krishna Janmashtami -->
+    <article class="festival-card">
+        <img src="https://m.media-amazon.com/images/I/81H02rw7+YL.jpg" alt="Krishna Janmashtami">
+        <h2>Lord Krishna</h2>
+        <p>Celebrates the birth of Lord Krishna with devotional singing, dancing, and reenactments of his childhood.</p>
+    </article>
+
+</section>
 
 </body>
-</html>
-
-
-
+</html> 
